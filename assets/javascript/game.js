@@ -3,7 +3,11 @@
 var wins = 0;
 var losses = 0;
 var randomNumber = Math.floor(Math.random() * 120) + 19;
- 
+var buttonOne = Math.floor(Math.random() * 12) + 1;
+var buttonTwo = Math.floor(Math.random() * 12) + 1;
+var buttonThree = Math.floor(Math.random() * 12) + 1;
+var buttonFour = Math.floor(Math.random() * 12) + 1;
+
 //turn images into buttons
 
 //give each button a random value 1-12
