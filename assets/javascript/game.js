@@ -30,6 +30,16 @@ $(document).ready(function () {
 
     };
 
+    //define function to check for win/loss after each click
+    function check() {
+        if (userTotal === randomNumber) {
+            winner()
+        }
+        else if (userTotal > randomNumber) {
+            loser();
+        }
+    }
+
     //add jquery to display the target number
     $("#targetNumber").text("Number to guess: " + randomNumber);
 
@@ -57,45 +67,25 @@ $(document).ready(function () {
     $("#crystalOne").on("click", function () {
         userTotal = buttonOne + userTotal;
         $("#userNumber").text("Your total: " + userTotal);
-        if (userTotal === randomNumber) {
-            winner()
-        }
-        else if (userTotal > randomNumber) {
-            loser();
-        }
+       check();
     }),
 
         $("#crystalTwo").on("click", function () {
             userTotal = buttonTwo + userTotal;
             $("#userNumber").text("Your total: " + userTotal);
-            if (userTotal === randomNumber) {
-                winner()
-            }
-            else if (userTotal > randomNumber) {
-                loser();
-            }
+            check();
         }),
 
         $("#crystalThree").on("click", function () {
             userTotal = buttonThree + userTotal;
             $("#userNumber").text("Your total: " + userTotal);
-            if (userTotal === randomNumber) {
-                winner()
-            }
-            else if (userTotal > randomNumber) {
-                loser();
-            }
+            check();
         }),
 
         $("#crystalFour").on("click", function () {
             userTotal = buttonFour + userTotal;
             $("#userNumber").text("Your total: " + userTotal);
-            if (userTotal === randomNumber) {
-                winner()
-            }
-            else if (userTotal > randomNumber) {
-                loser();
-            }
+           check();
         })
 
         //Debugging
@@ -106,5 +96,5 @@ $(document).ready(function () {
         console.log(buttonThree);
         console.log(buttonFour);
     }
-    consoles();
+    reset();
 });
