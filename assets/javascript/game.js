@@ -5,7 +5,7 @@ $(document).ready(function () {
     //define variables
     var wins = 0;
     var losses = 0;
-    var userGuess = 0
+    var userTotal = 0
     var randomNumber = Math.floor(Math.random() * 102) + 19;
     var buttonOne = Math.floor(Math.random() * 12) + 1;
     var buttonTwo = Math.floor(Math.random() * 12) + 1;
@@ -16,15 +16,27 @@ $(document).ready(function () {
     $("#targetNumber").append("Number to guess: " + randomNumber);
 
     //add jquery to display user's guess
-    $("#userNumber").append("Your number: " + userGuess);
+    $("#userNumber").append("Your total: " + userTotal);
     
     //add jquery to assign value to the buttons
-    $("#crystalOne").attr(buttonOne)
-    $("#crystalTwo").attr(buttonTwo)
-    $("#crystalThree").attr(buttonThree)
-    $("#crystalFour").attr(buttonFour)
-    
     //define function that adds up the button presses
+
+    $("#crystalOne").on("click", function () {
+        userTotal = buttonOne + userTotal;
+    },
+
+    $("#crystalTwo").on("click", function () {
+        userTotal = buttonTwo + userTotal;
+    },
+
+    $("#crystalThree").on("click", function () {
+        userTotal = buttonThree + userTotal;
+    },
+
+    $("#crystalFour").on("click", function () {
+        userTotal = buttonFour + userTotal;
+    }
+    
 
     //define function that determines if the player wins updates wins
 
