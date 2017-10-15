@@ -16,14 +16,14 @@ $(document).ready(function () {
     //define function that determines if the player wins/loses, updates wins/losses
     function winner() {
         $("#result").text("You Win!");
-        wins ++;
+        wins +=1;
         $("#record").text("Wins: " + wins + " Losses: " + losses);        
         reset();
     };
     function loser() {
         if (userTotal > randomNumber) {
             $("#result").text("You Lose!");
-            losses ++;
+            losses +=1;
             $("#record").text("Wins: " + wins + " Losses: " + losses);            
             reset();
         }
