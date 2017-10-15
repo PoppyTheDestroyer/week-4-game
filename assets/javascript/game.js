@@ -13,7 +13,7 @@ $(document).ready(function () {
     var buttonFour = Math.floor(Math.random() * 12) + 1;
 
 
-    //define function that determines if the player wins/loses updates wins/losses
+    //define function that determines if the player wins/loses, updates wins/losses
     function winner() {
         $("#result").text("You Win!");
         wins ++;
@@ -29,6 +29,11 @@ $(document).ready(function () {
         }
 
     };
+    //define function to run after each user input.
+    function check() {
+        
+    }
+
     //add jquery to display the target number
     $("#targetNumber").text("Number to guess: " + randomNumber);
 
@@ -97,7 +102,7 @@ $(document).ready(function () {
             }
         })
 
-    //input display of user's total
+        //Debugging
     function consoles() {
         console.log(randomNumber);
         console.log(buttonOne);
