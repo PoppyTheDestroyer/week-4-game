@@ -29,10 +29,6 @@ $(document).ready(function () {
         }
 
     };
-    //define function to run after each user input.
-    function check() {
-        
-    }
 
     //add jquery to display the target number
     $("#targetNumber").text("Number to guess: " + randomNumber);
